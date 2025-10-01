@@ -2,12 +2,11 @@
 
 ## 📌 Project Overview
 
-This project analyzes the Brazilian E-Commerce Public Dataset by Olist to uncover insights into sales, customer behavior, payments, logistics, and customer satisfaction.
-The final output is an interactive Power BI dashboard designed for stakeholders to monitor KPIs and support data-driven decisions.
+An interactive Power BI dashboard built on the Olist Brazilian E-commerce dataset, providing insights into revenue trends, customer behavior, product performance, payment preferences, and delivery efficiency to support data-driven decision-making.
 
 ## 🎯 Problem Statement
 
-“How can Olist track sales, customer satisfaction, and logistics performance to improve business decisions?”
+“How can Olist track sales, customer satisfaction, and monitor perfrmance to improve business decisions?”
 
 ## 🚀 Objectives
 
@@ -24,6 +23,7 @@ Understand payment preferences
 Measure customer satisfaction with reviews
 
 Identify repeat vs. new customers
+
 Track delivery efficiency and problem areas.
 
 ## 📂 Dataset
@@ -46,6 +46,10 @@ Reviews
 
 Product Category Translations
 
+(📝 NOTE: The dataset is uploaded on Google Drive and can be directly accessed via the notebook. If you do not want to run the notebook, you can access the [raw dataset](https://drive.google.com/drive/folders/1_QhnnIgG1JtUz3Np_dsfU5feN7ssS1Iu?usp=sharing)
+ and [cleaned dataset](https://drive.google.com/file/d/10gle5RGetvhyTaKCsrTJAufL2_hKKUPR/view?usp=sharing)
+ directly.)
+
 ## 🛠 Data Cleaning & Preprocessing (Python / Jupyter Notebook)
 
 Steps performed:
@@ -55,6 +59,8 @@ Loaded all 8 CSVs into Pandas
 Selected useful columns only (dropped irrelevant ones)
 
 Filtered orders → kept only delivered orders
+
+Merged tables → one clean analysis-ready CSV
 
 Created new features:
 
@@ -66,73 +72,19 @@ late_delivery_flag (on-time vs late)
 
 Repeat vs. New customer flag
 
-Merged tables → one clean analysis-ready CSV
+Translated reviews into english
 
-Exported final dataset → olist_cleaned.csv
-
-## 📊 Dashboard Layout (Power BI)
-1. Top Section – KPIs
-
-Total Revenue
-
-Total Orders
-
-Total Customers
-
-Avg. Delivery Time
-
-Avg. Review Score
-
-2. Sales Overview
-
-Revenue over time (line chart)
-
-Orders by payment type (stacked column)
-
-Revenue by product category (treemap)
-
-3. Customer Insights
-
-Orders by state (bar chart)
-
-Revenue by location (map)
-
-New vs repeat customers (donut chart)
-
-4. Operations & Feedback
-
-On-time vs late deliveries (clustered column)
-
-Avg delivery days (gauge)
-
-Avg review score by category (bar chart)
-
-Word Cloud of review comments
+Exported final dataset → cleaned_df.csv
 
 ## ⚡ Key Insights
 
-[Example] 60% of payments are via credit card
+88.5% of payments are via credit card
 
-[Example] Late deliveries reduce average review score by ~1 star
+Delivery performance is relatively slow compared to typical e-commerce benchmarks (2–7 days)
 
-[Example] Electronics generate highest revenue, but fashion has most orders
+beleza_saude is top performing category
 
-[Example] São Paulo is the top customer state by revenue
-
-📁 Repository Structure
-📦 olist-ecommerce-analytics
- ┣ 📂 data
- ┃ ┣ olist_orders_dataset.csv
- ┃ ┣ olist_order_items_dataset.csv
- ┃ ┗ ... (other raw csvs)
- ┣ 📂 notebooks
- ┃ ┗ data_cleaning_and_merging.ipynb
- ┣ 📂 dashboard
- ┃ ┗ powerbi_dashboard.pbix
- ┣ 📂 exports
- ┃ ┗ olist_cleaned.csv
- ┣ README.md
- ┗ requirements.txt
+São Paulo is the top customer state by revenue
 
 ## 🛠 Tools Used
 
@@ -158,4 +110,8 @@ Understand customer behavior (repeat vs new)
 
 ## 📷 Dashboard Preview
 
-(Insert screenshots or GIF of your Power BI dashboard here)
+<img width="1341" height="757" alt="image" src="https://github.com/user-attachments/assets/1bce35e5-66b4-4951-b006-223532a4d36f" />
+
+<img width="1342" height="756" alt="image" src="https://github.com/user-attachments/assets/ea36cdd6-d7e6-4a99-978e-3cd912c68ccb" />
+
+
